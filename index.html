@@ -52,10 +52,17 @@
     <script type="text/javascript" src="dist/md5.js"></script>
     <script type="text/javascript">
 
-        while(md5(prompt("T4Sk: Entrez le mot de passe")) != "49f68a5c8493ec2c0bf489821c21fc3b"){
+        function auth(){
             if(md5(prompt("T4Sk: Entrez le mot de passe")) == "49f68a5c8493ec2c0bf489821c21fc3b"){
-                break;
+                document.body.style.display = "block";
+                return true;
+            }else{
+                return false;
             }
+        }
+        
+        while(!auth()){
+            location.reload();
         }
     </script>
     </body>
