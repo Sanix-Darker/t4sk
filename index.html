@@ -52,8 +52,7 @@
     <script type="text/javascript" src="dist/md5.js"></script>
     <script type="text/javascript">
 
-        var pass = prompt("T4Sk: Entrez le mot de passe");
-        if(md5(pass) != "49f68a5c8493ec2c0bf489821c21fc3b")
+        if(md5(prompt("T4Sk: Entrez le mot de passe")) != "49f68a5c8493ec2c0bf489821c21fc3b")
             document.location = "https://google.com";
         else
             document.body.style.display = "block";
