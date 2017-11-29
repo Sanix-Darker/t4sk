@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <head>
+        <meta charset="utf-8">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+        <title>T4sk</title>
+
+        <link rel="stylesheet" href="dist/font-awesome.min.css"/>
+        <link href='dist/fonts.googleapis.css' rel='stylesheet' type='text/css'/>
+        <link rel="stylesheet" type="text/css" href="styles/styles.min.css" />
+        <link rel="stylesheet" type="text/css" href="dist/jquery.gridster.css" />
+
+        <script src="dist/jquery.min.js"></script>
+    </head>
+
+    <body style="display: none;">
+    <section class="gridster">
+        <ul id="base-list"><!-- Cards are loaded here dynamically. --></ul>
+    </section>
+
+    <nav>
+        <div id="menu-content">
+            <!-- Menu is loaded here dynamically. -->
+        </div>
+        <div id="menu-buttons">
+            <h1>T4sk <a href="https://github.com/Sanix-Darker" target="_blank"> by sanix darker</a></h1>
+            <span id="flash-messaging"></span>
+            <div id="list-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="function-icons">
+                <span id="main-add" class="fa fa-plus-circle fa-fw"></span>
+                <span id="save" class="fa fa-floppy-o fa-fw"></span>
+            </div>
+        </div>
+    </nav>
+
+    <script src="rich-functional-list/jquery.rich-functional-list.min.js"></script>
+    <script src="controllers/data-access.min.js"></script>
+    <script src="controllers/parse-data.min.js"></script>
+    <script src="controllers/parse-dom.min.js"></script>
+    <script src="controllers/controller.min.js"></script>
+
+    <script src="dist/jquery.gridster.js"></script>
+    <script src="view.min.js"></script>
+    <script type="text/javascript" src="dist/md5.js"></script>
+    <script type="text/javascript">
+
+        var pass = prompt("T4Sk: Entrez le mot de passe");
+        if(md5(pass) != "49f68a5c8493ec2c0bf489821c21fc3b")
+            document.location = "https://google.com";
+        else
+            document.body.style.display = "block";
+
+    </script>
+    </body>
+
+</html>
