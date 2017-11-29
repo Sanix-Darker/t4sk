@@ -53,16 +53,20 @@
     <script type="text/javascript">
 
         function auth(){
-            if(md5(prompt("T4Sk: Entrez le mot de passe")) == "49f68a5c8493ec2c0bf489821c21fc3b"){
-                document.body.style.display = "block";
-                return true;
+            var pass = prompt("T4Sk: Entrez le mot de passe");
+            if (pass === null) {
+                location.reload();
             }else{
-                document.write = "<center><a href=''><h1>Reconnexion</h1></a></center>";
-                return false;
+                if(md5(pass) == "49f68a5c8493ec2c0bf489821c21fc3b"){
+                    document.body.style.display = "block";
+                    return true;
+                }else{
+                    return false;
+                }
             }
         }
         
-        while(!auth()){
+        if(!auth()){
             location.reload();
         }
     </script>
